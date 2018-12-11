@@ -1,0 +1,36 @@
+$brown: "Brown Bold", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+$avenirbold: "Avenir Next Bold", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+$avenirmed: "Avenir Next Med", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+$serif: "Georgia", "Times New Roman", serif;
+
+@font-face {
+	font-family: 'Brown Bold';
+	src: url('/wp-content/themes/gracehill/fonts/BrownBold.eot');
+	src: url('/wp-content/themes/gracehill/fonts/BrownBold.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/gracehill/fonts/BrownBold.woff') format('woff'),
+		url('/wp-content/themes/gracehill/fonts/BrownBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next Bold';
+	src: url('/wp-content/themes/gracehill/fonts/AvenirNextLTPro-Bold.eot');
+	src: url('/wp-content/themes/gracehill/fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/gracehill/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+		url('/wp-content/themes/gracehill/fonts/AvenirNextLTPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next Med';
+	src: url('/wp-content/themes/gracehill/fonts/AvenirLTStd-Medium.eot');
+	src: url('/wp-content/themes/gracehill/fonts/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/gracehill/fonts/AvenirLTStd-Medium.woff') format('woff'),
+		url('/wp-content/themes/gracehill/fonts/AvenirLTStd-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+

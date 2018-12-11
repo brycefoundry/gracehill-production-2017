@@ -1,0 +1,383 @@
+@import "compass/css3/transform";
+@import "compass/css3";
+@import "plugins";
+@import "fonts";
+@import "colors";
+
+/**
+Start Navigation Styles
+**/
+
+header{
+	width: 100%;
+	height: 60px;
+	position: relative;
+	background-color: $white;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	display: block;
+
+
+	.container{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+}
+
+@media only screen and (min-width: 1900px){
+	header .container{
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+//Logged-In Adjustments
+body.admin-bar{
+	padding-top: 0px;
+
+	header{
+		top: 0px;
+	}
+}
+
+body.admin-bar.page-template-home{
+	header{
+		 top: 32px;
+	}
+}
+
+#menu-btn{
+	display: none;
+}
+
+#mobile-home-btn{
+	display: none;
+}
+
+#global-nav-list{
+	li{
+		display: inline-block;
+		width: 13.9%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		position: relative;
+		vertical-align: top;
+		a, button{
+			font-size: .750em;
+			font-family: $avenirbold;
+			text-transform: uppercase;
+			color: $black;
+			line-height: 60px;
+			height: 100%;
+			width: 100%;
+			display: block;
+			
+			//Navigation Bottom Border
+			&:after{
+				content: "";
+				position: absolute;
+				bottom: 16px;
+				left: 50%;
+				height: 3px;
+				margin-left: -20px;
+				min-width: 40px;
+				background-color: $grey;
+				@include transition(.2s all ease-in-out);
+			}
+		}
+	}
+
+	//Products and Support Border Detail
+	#global-nav-1, #global-nav-3{
+		a:after{
+			margin-left: -35px;
+			min-width: 70px;
+		} 
+		
+	}
+
+	//Courseware Bottom Border Detail
+	#global-nav-2 a:after{
+		margin-left: -45px;
+		min-width: 90px;
+	}
+
+	//Navigation Hover
+	li:hover{
+		a,button{
+			&:after{
+			background-color: $black;
+			@include transition(.2s all ease-in-out);
+			}
+		}
+	}
+
+	
+}
+
+#global-nav-4{
+	background:url(/wp-content/themes/gracehill/img/global/grey-logo.png) no-repeat transparent scroll;
+	background-size: 111px 39px;
+	background-position: center center;
+	
+
+
+
+	a,button{
+		text-indent: -10000px;
+		&:after{
+			display: none;
+		}
+	}
+
+	&:hover{
+		&:after{
+			display: none;
+		}
+	}
+}
+
+body.home{
+	#global-nav-4{
+		background:url(/wp-content/themes/gracehill/img/global/white-logo.png) no-repeat transparent scroll;
+		background-size: 111px 39px;
+		background-position: center center;
+
+
+	}
+
+	header{
+		position: absolute;
+		top: 0;
+		background-color: transparent;
+	}
+
+	#global-nav-list{
+		li{
+			a,button{
+				color: $white;
+				font-family: $avenirmed;
+
+				&:after{
+					
+					background-color: rgba(255,255,255,.1);
+					@include transition(.2s all ease-in-out);
+				}
+
+				&:hover{
+					&:after{
+						background-color: rgba(255,255,255,1);
+						@include transition(.2s all ease-in-out);
+					}
+				}
+			}
+		}
+	}
+}
+
+body.page-template-support{
+	#global-nav-3 a:after{
+		background-color: $primary-1;
+	}
+}
+
+body.page-template-products{
+	#global-nav-1 a:after{
+		background-color: $primary-1;
+	}
+}
+
+body.page-template-courseware{
+	#global-nav-2 a:after{
+		background-color: $primary-1;
+	}
+}
+
+body.page-template-about{
+	#global-nav-5 a:after{
+		background-color: $primary-1;
+	}
+}
+
+body.page-template-blog{
+	#global-nav-6 a:after{
+		background-color: $primary-1;
+	}
+}
+
+
+
+
+/**
+End Navigation Styles
+**/
+
+/**
+Start Mobile Menu Styles
+**/
+
+@media only screen and (max-width: 1080px){
+
+	body.home{
+		header{
+			position: fixed;
+			top: 60px;
+			right: 20px;
+			background-color: $white;
+
+			#global-nav-list li a, #global-nav-list li button{
+				color: $black;
+				font-family: $avenirbold;
+			}
+		}
+	}
+	header{
+		width: 150px;
+		height: auto;
+		top: 60px;
+		right: 20px;
+		left: auto;
+		position: fixed;
+		z-index:20;
+		background-color: $white;
+		@include border-radius(4px);
+		@include box-shadow(0 0 3px rgba(0,0,0,.2));
+		pointer-events: none;
+		@include opacity(0);
+		@include transition(.2s all ease-in-out);
+
+		&.open{
+			@include opacity(1);
+			@include transition(.2s all ease-in-out);
+			pointer-events: auto;
+		}
+	}
+
+	#global-nav-list{
+
+		li{
+			display: block;
+			width: 100%;
+			text-align: left;
+			font-size: 1em;
+			@include transition(.2s all ease-in-out);
+
+			@include box-shadow(inset 0px -1px 0 rgba(0,0,0,.2));
+
+			a,button{
+				text-indent: 20px;
+				text-align: left;
+				&:after{
+					display: none;
+				}
+			}
+
+			&:hover{
+				background-color: rgba(0,0,0,.1);
+				@include transition(.2s all ease-in-out);
+			}
+		}
+
+		#global-nav-4{
+			display: none;
+		}
+	}
+
+	
+
+
+
+	body.home{
+		#global-nav-4{
+			background-image: none;
+		}
+	}
+	
+
+	#mobile-home-btn{
+		background:url(/wp-content/themes/gracehill/img/global/white-logo.png) no-repeat transparent scroll;
+		background-size: 111px 39px;
+		background-position: center center;
+		width: 111px;
+		height: 39px;
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 12px;
+		z-index: 20;
+		text-indent: -10000px;
+				
+		
+	}
+
+
+
+	#menu-btn{
+		width: 45px;
+	    height: 45px;
+	    position: absolute;
+	    top: 10px;
+	    background-color: transparent;
+	    right: 10px;
+		display: block;
+		@include transform(rotate(0deg));
+		@include transition(.5s ease-in-out);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		z-index: 20;
+		span{
+			display: block;
+		    position: absolute;
+		    height: 3px;
+		    width: 50%;
+		    left: 50%;
+		    background: $white;
+		    @include border-radius(9px);
+		    opacity: 1;
+		    top: 50%;
+		    margin-left: -25%;
+			
+			@include transform(rotate(0deg));
+			@include transition(.25s ease-in-out);
+			&:nth-child(1){
+				top: 12px;
+			}
+			&:nth-child(2){
+				top: 21px;
+			}
+			&:nth-child(3){
+				top: 30px;
+			}
+	
+		}
+
+		&.open span{
+			&:nth-child(1){
+
+				@include transform(rotate(45deg));
+				top: 21px;
+				left: 23px;
+			}
+
+			&:nth-child(2){
+				width: 0%;
+				 opacity: 0;
+			}
+
+			&:nth-child(3){
+				@include transform(rotate(-45deg));
+				top: 21px;
+				left: 23px;
+			}
+		}
+	}
+}
+/**
+End Mobile Menu Styles
+**/
+

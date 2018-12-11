@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="9px" viewBox="0 0 6 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="button-arrow-white" transform="translate(1.000000, 1.000000)" stroke-width="2" stroke="#FFFFFF">
+            <g id="Symbols">
+                <g id="Chevron-Right-Icon">
+                    <g id="Path-2">
+                        <path d="M0,0 L3.0978412,2.8251648 C3.5065143,3.197866 3.5105999,3.798408 3.0978412,4.1748352 L0,7" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
